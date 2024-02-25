@@ -18,7 +18,7 @@ const fs = require("fs/promises");
       existingFileHandle.close();
 
       // we already have that file...
-      return console.log(`The file ${path} already exist`);
+      return console.log(`The file ${path} already exists`);
     } catch (error) {
       // we don't have the file, now we should create it
       const newFileHandle = await fs.open(path, "w");
